@@ -1,0 +1,48 @@
+HTTP(Hyper Text Transfer Protocol)
+
+HTTP1.1 and HTTP2 are versions of HTTP that manages the transfer of data from the browser to server and vice versa
+lets see..
+Difference between HTTP1.1 and HTTP2
+
+TCP CONNECTIONS
+HTTP1.1:
+Has more than one TCP(transmission Control Protocol),3-6 connection in later versions of it.
+TCP is like a pipeline which will be created between the server and client(browser) to transfer request and responses.
+HTTP2:
+Has single TCP connections
+
+MULTIPLEXING
+HTTP1.1:
+One connection per request.The next request slows down until the first response is sent
+HTTP2:
+Uses multiplexing which allows multiple request under single TCP
+
+BINARY PROTOCOL
+HTTP1.1:
+Uses texual format of data for communication
+HTTP2:
+Uses binary data format for communication(increases efficiency)
+
+HEADER HANDLING
+HTTP1.1:
+headers are sent repeatedly for each request and response even while requesting to the
+same server 
+HTTP2:
+includes header compression, which reduces size of data and time consumed by compressing 
+repeated headers
+
+STREAM PRORITIZING
+HTTP1.1:
+Client cannot prioritize the certain stream or resources they want.  
+HTTP2:
+This allows to prioritize individual resources which enables efficient
+resource allocation ensuring critical resources are downloaded first.
+
+SERVER PUSH
+HTTP1.1:
+Does not have server push feature.The required resources are fetched only after 
+first auto request is sent to the server .This increases the load time.
+HTTP2:
+Has server push feature which proactively pushes the resources to the clients
+before the request reduing the loading time and eliminating the round trip of 
+fetching required resources again after request
